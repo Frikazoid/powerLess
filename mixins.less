@@ -1,0 +1,158 @@
+
+.size(@w:50px , @h:20px)
+    {width:@w; height: @h;}
+.size(@w:50px)
+    {width:@w; height: @w;}    
+   
+.display-box(...) 
+    {display: -webkit-box; display: -moz-box; display: -ms-box; display: -o-box; display: box;}
+
+.box-orient(...)
+    {.display-box();-webkit-box-orient: @arguments; -moz-box-orient: @arguments;-ms-box-orient: @arguments; -o-box-orient: @arguments; box-orient: @arguments;}
+
+.box-pack(...) 
+    {.display-box();-webkit-box-pack: @arguments; -moz-box-pack: @arguments;-ms-box-pack: @arguments; -o-box-pack: @arguments; box-pack: @arguments;}
+
+.box-align(...) 
+    {.display-box();-webkit-box-align: @arguments; -moz-box-align: @arguments;-ms-box-align: @arguments; -o-box-align: @arguments; box-align: @arguments;}
+
+.box-flex(...)
+    {.display-box();-webkit-box-flex: @arguments; -moz-box-flex: @arguments; -ms-box-flex: @arguments; -o-box-flex: @arguments; box-flex: @arguments;}
+
+.box-sizing(...)
+    {-webkit-box-sizing: @arguments; -moz-box-sizing: @arguments; box-sizing: @arguments;}
+
+.column-count(...)
+    {-webkit-column-count: @arguments; -moz-column-count: @arguments; column-count: @arguments;}
+    
+.column-gap(...)
+    {-webkit-column-gap: @arguments; -moz-column-gap: @arguments; column-gap: @arguments;}    
+
+.user-select(...)
+    {-webkit-touch-callout: @arguments; -webkit-user-select: @arguments;-moz-user-select: @arguments; -ms-user-select: @arguments;-o-user-select: @arguments;  user-select: @arguments;}
+
+.appearance(...)
+    {-webkit-appearance: @arguments; -moz-appearance: @arguments; -ms-appearance: @arguments; -o-appearance: @arguments; appearance: @arguments;}
+
+.border-radius(@radius: 5px)
+    {border-radius: @radius; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box;}
+
+.linear-gradient(...) {
+    background-image: -webkit-linear-gradient(@arguments); background-image: -moz-linear-gradient(@arguments); background-image: -ms-linear-gradient(@arguments);
+    background-image:      -o-linear-gradient(@arguments); background-image:      linear-gradient(@arguments);
+}
+
+.linear-gradient-vert(@color1: #999, @color2: #222) 
+    {.linear-gradient(top, @color1 0% , @color2 100%);}
+
+.radial-gradient(...) {
+    background-image: -webkit-radial-gradient(@arguments); background-image: -moz-radial-gradient(@arguments); background-image:-ms-radial-gradient(@arguments);
+    background-image:      -o-radial-gradient(@arguments); background-image:      radial-gradient(@arguments);
+}
+
+.transform(...)
+    {-webkit-transform: @arguments; -moz-transform: @arguments;-ms-transform: @arguments; -o-transform: @arguments; transform: @arguments;}
+
+.transform-origin(...) 
+    {-webkit-transform-origin: @arguments; -moz-transform-origin: @arguments;-ms-transform-origin: @arguments; -o-transform-origin: @arguments; transform-origin: @arguments;}
+
+.transform-style(...) 
+    {-webkit-transform-style: @arguments; -moz-transform-style: @arguments;-ms-transform-style: @arguments; -o-transform-style: @arguments; transform-style: @arguments;}
+
+.perspective(...) 
+    {-webkit-perspective: @arguments; -moz-perspective: @arguments; -ms-perspective: @arguments; -o-perspective: @arguments; perspective: @arguments;}
+
+.perspective-origin(...) 
+    {-webkit-perspective-origin: @arguments; -moz-perspective-origin: @arguments; -ms-perspective-origin: @arguments;-o-perspective-origin: @arguments; perspective-origin: @arguments;}
+
+.backface-visibility(...) 
+    {-webkit-backface-visibility: @arguments; -moz-backface-visibility: @arguments; -ms-backface-visibility: @arguments; -o-backface-visibility: @arguments; backface-visibility: @arguments;}
+
+.matrix(...) 
+    {-webkit-transform: matrix(@arguments); -moz-transform: matrix(@arguments); -ms-transform: matrix(@arguments); -o-transform: matrix(@arguments);transform: matrix(@arguments);}
+
+.translate(...) 
+    {-webkit-transform: translate(@arguments); -moz-transform: translate(@arguments); -ms-transform: translate(@arguments); -o-transform: translate(@arguments); transform: translate(@arguments);}
+
+.scale(...) 
+    {-webkit-transform: scale(@arguments); -moz-transform: scale(@arguments);-ms-transform: scale(@arguments); -o-transform: scale(@arguments);transform: scale(@arguments);}
+
+.rotate(...) 
+    {-webkit-transform: rotate(@arguments); -moz-transform: rotate(@arguments); -ms-transform: rotate(@arguments); -o-transform: rotate(@arguments); transform: rotate(@arguments);}
+
+.skew(...) 
+    {-webkit-transform: skew(@arguments); -moz-transform: skew(@arguments); -ms-transform: skew(@arguments); -o-transform: skew(@arguments); transform: skew(@arguments);}
+
+.transition(...) 
+    {-webkit-transition: @arguments; -moz-transition: @arguments;-ms-transition: @arguments; -o-transition: @arguments; transition: @arguments;}
+
+/* Cubic */
+@easeInCubic     :  cubic-bezier(0.550, 0.055, 0.675, 0.190);
+@easeOutCubic    :  cubic-bezier(0.215, 0.610, 0.355, 1.000);
+@easeInOutCubic  :  cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+// Circ
+@easeInCirc      :  cubic-bezier(0.600, 0.040, 0.980, 0.335);
+@easeOutCirc     :  cubic-bezier(0.075, 0.820, 0.165, 1.000);
+@easeInOutCirc   :  cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+// Expo
+@easeInExpo      :  cubic-bezier(0.950, 0.050, 0.795, 0.035);
+@easeOutExpo     :  cubic-bezier(0.190, 1.000, 0.220, 1.000);
+@easeInOutExpo   :  cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+// Quad
+@easeInQuad      :  cubic-bezier(0.550, 0.085, 0.680, 0.530);
+@easeOutQuad     :  cubic-bezier(0.250, 0.460, 0.450, 0.940);
+@easeInOutQuad   :  cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+// Quart
+@easeInQuart     :  cubic-bezier(0.895, 0.030, 0.685, 0.220);
+@easeOutQuart    :  cubic-bezier(0.165, 0.840, 0.440, 1.000);
+@easeInOutQuart  :  cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+// Quint
+@easeInQuint     :  cubic-bezier(0.755, 0.050, 0.855, 0.060);
+@easeOutQuint    :  cubic-bezier(0.230, 1.000, 0.320, 1.000);
+@easeInOutQuint  :  cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+// Sine
+@easeInSine      :  cubic-bezier(0.470, 0.000, 0.745, 0.715);
+@easeOutSine     :  cubic-bezier(0.390, 0.575, 0.565, 1.000);
+@easeInOutSine   :  cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+// Back
+@easeInBack      :  cubic-bezier(0.600, -0.280, 0.735, 0.045);
+@easeOutBack     :  cubic-bezier(0.175,  0.885, 0.320, 1.275);
+@easeInOutBack   :  cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+
+
+//============================================================
+//
+// Copyright (c) 2012 Matthew Wagerfield
+//
+// Permission is hereby granted, free of charge, to any 
+// person obtaining a copy of this software and associated 
+// documentation files (the "Software"), to deal in the 
+// Software without restriction, including without limitation 
+// the rights to use, copy, modify, merge, publish, distribute,
+// sublicense, and/or sell copies of the Software, and to 
+// permit persons to whom the Software is furnished to do 
+// so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice 
+// shall be included in all copies or substantial portions 
+// of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY 
+// OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
+// LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
+// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO 
+// EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE 
+// FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+// AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
+// OR OTHER DEALINGS IN THE SOFTWARE.
+//
+//============================================================
